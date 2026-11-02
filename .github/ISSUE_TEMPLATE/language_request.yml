@@ -1,0 +1,31 @@
+name: Language request / Запрос языка
+description: My keyboard layout has no language profile / Для моей раскладки нет языкового профиля
+title: "Language request: "
+labels: ["language-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The easiest way to fill this in is from the program itself:
+        Settings → Languages → "Tell the author…" → "Open on GitHub".
+        The text below is then filled in for you.
+
+        Проще всего заполнить это из самой программы:
+        Настройки → Языки → «Сообщить автору…» → «Открыть на GitHub».
+  # The id "details" is what KeyboardSwitcher pre-fills (LanguageRequestForm.OpenGitHub).
+  # Do not rename it.
+  - type: textarea
+    id: details
+    attributes:
+      label: Layout details / Описание раскладок
+      description: Filled in by the program. Contains no personal data. / Заполняется программой, личных данных не содержит.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Language you type in / На каком языке вы пишете
+      placeholder: "e.g. Polish / например, польский"
+    validations:
+      required: false
