@@ -1,0 +1,39 @@
+name: Bug report / Сообщить об ошибке
+description: Something was corrected wrongly, or not corrected / Программа исправила не то или не исправила
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The easiest way: press **Ctrl+F12** right after the problem (or tray menu → "Create a bug report"),
+        then **"Send to GitHub…"** — the report is copied to the clipboard; paste it below with **Ctrl+V**.
+
+        Проще всего: сразу после ошибки нажмите **Ctrl+F12** (или меню в трее → «Создать отчёт об ошибке»),
+        затем **«Отправить на GitHub…»** — отчёт скопируется в буфер обмена; вставьте его ниже через **Ctrl+V**.
+
+        ⚠ Everything here is public. The report contains the text you typed — review it first.
+        ⚠ Всё, что здесь опубликовано, видят все. В отчёте есть набранный вами текст — просмотрите его.
+  # The ids "version" and "report" are used by TidyInput (BugReportForm.SendToGitHub):
+  # "version" is pre-filled through the URL. Do not rename them.
+  - type: input
+    id: version
+    attributes:
+      label: Program version / Версия программы
+      placeholder: "12.00"
+    validations:
+      required: false
+  - type: textarea
+    id: report
+    attributes:
+      label: Report / Отчёт
+      description: Paste the report copied by the program (Ctrl+V). / Вставьте отчёт, скопированный программой (Ctrl+V).
+    validations:
+      required: true
+  - type: textarea
+    id: comment
+    attributes:
+      label: Anything else / Что-то ещё
+      description: Optional. / Необязательно.
+    validations:
+      required: false
