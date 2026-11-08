@@ -7,12 +7,12 @@ body:
     attributes:
       value: |
         The easiest way to fill this in is from the program itself:
-        Settings → Languages → "Tell the author…" → "Open on GitHub".
+        Settings → Languages → "Request language support…" → "Open on GitHub".
         The text below is then filled in for you.
 
         Проще всего заполнить это из самой программы:
-        Настройки → Языки → «Сообщить автору…» → «Открыть на GitHub».
-  # The id "details" is what KeyboardSwitcher pre-fills (LanguageRequestForm.OpenGitHub).
+        Настройки → Языки → «Запросить поддержку языка…» → «Открыть на GitHub».
+  # The id "details" is what TidyInput pre-fills (LanguageRequestForm.OpenGitHub).
   # Do not rename it.
   - type: textarea
     id: details
